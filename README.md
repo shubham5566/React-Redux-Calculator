@@ -1,12 +1,39 @@
-# React + Vite
+# React-Redux Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![image](https://github.com/user-attachments/assets/2a3fe5fd-5395-464f-a4ab-c46d51243e18)
 
-Currently, two official plugins are available:
+A feature-rich calculator application built with React, Redux Toolkit, and Bootstrap that handles complex operations with precision.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+### 🧮 Core Operations
+- **Basic Arithmetic**: `+`, `-`, `×`, `÷`
+- **Operator Precedence**: Correctly solves `5 + 2 × 3 = 11` (not 21)
+- **Chained Calculations**: Supports sequential operations
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ⚡ Advanced Functions
+- **Percentage Conversion**: Instantly converts to percent
+- **Sign Toggling**: Switch between positive/negative
+- **Decimal Handling**: Smart floating-point formatting
+
+### 🛡️ Safety & Reliability
+- **Divide-by-Zero Protection**: Shows alert and resets
+- **Input Validation**: Prevents invalid entries
+- **Precision Control**: Limits to 6 significant digits
+
+### 🎨 UI Components
+- Responsive Bootstrap layout
+- Themed operator buttons
+- Large visible display
+
+## Technical Implementation
+
+### State Management
+```javascript
+{
+  current: '0',       // Current input
+  previous: null,     // Previous operand
+  operator: null,     // Active operation
+  overwrite: false,   // Display control flag
+  lastCalculation: '' // Formula history
+}
